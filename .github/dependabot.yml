@@ -1,0 +1,33 @@
+
+# Dependabot version updates for GIMP fork
+# https://docs.github.com/code-security/dependabot/
+# dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+
+updates:
+  # GIMP Git submodules (gimp-data)
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Rome"
+
+    open-pull-requests-limit: 3
+
+    commit-message:
+      prefix: "chore(deps)"
+
+  # Optional: GitHub Actions
+  # Uncomment if your fork uses .github/workflows/
+  #
+  # - package-ecosystem: "github-actions"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "weekly"
+  #     day: "monday"
+  #   open-pull-requests-limit: 5
+  #   commit-message:
+  #     prefix: "chore(ci)"
